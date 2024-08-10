@@ -1,4 +1,4 @@
-﻿/**
+/**
  * @brief Orbital simulation
  * @author Marc S. Ressl
  *
@@ -14,7 +14,13 @@
 struct OrbitalBody
 {
     // Fill in your code here...
-
+    const char* name;       // Name
+    float mass;		        // [kg]
+    float radius;	        // [m]
+    Color color;	        // Raylib color
+    Vector3 position;       // [m]
+    Vector3 velocity;       // [m/s]
+    Vector3 acceleration;   // [m/s^2]
 
 };
 
@@ -24,7 +30,9 @@ struct OrbitalBody
 struct OrbitalSim
 {
     // Fill in your code here...
-
+    float timeStep;                 // [s]
+    int numBodies;                  // number of bodies in simulation
+    OrbitalBody** orbitalBodies;    //pointer to array (pointer) of OrbitalBody
 
 };
 
